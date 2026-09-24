@@ -43,6 +43,8 @@ def create_app(config_class=Config):
     with app.app_context():
         db.create_all()
         seed_initial_data()
+    print("REGISTERED ROUTES:")
+    print(app.url_map)
 
     return app
 
